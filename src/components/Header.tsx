@@ -15,7 +15,7 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { href: '#about', label: '私たち' },
+    { href: '#about', label: '私たちについて' },
     { href: '#blog', label: 'ブログ' },
     { href: '#services', label: 'サービス' },
     { href: '#contact', label: 'お問い合わせ' },
