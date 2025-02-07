@@ -30,12 +30,12 @@ const Contact = () => {
           >
             <h2 className="text-3xl font-bold mb-6">Let's Create Something Amazing</h2>
             <div className="mb-6">
-              <p className="text-gray-400">Tokyo Office</p>
-              <p className="text-gray-400">Shibuya, Tokyo 150-0002</p>
+              <p className="text-gray-400">〒106-0032</p>
+              <p className="text-gray-400">東京都港区六本木3-2-1 デジタルタワー15階</p>
             </div>
             <div className="mb-6">
-              <p className="text-gray-400">hello@pixelflow.agency</p>
-              <p className="text-gray-400">+81 3-1234-5678</p>
+              <p className="text-gray-400">info@digital-marketing.co.jp</p>
+              <p className="text-gray-400">03-1234-5678</p>
             </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
@@ -63,7 +63,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Your Name"
+                placeholder="お名前"
                 required
                 className="w-full p-3 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:border-purple-500 transition-colors"
               />
@@ -72,7 +72,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder="メールアドレス"
                 required
                 className="w-full p-3 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:border-purple-500 transition-colors"
               />
@@ -81,7 +81,7 @@ const Contact = () => {
               <input
                 type="tel"
                 name="phone"
-                placeholder="Phone Number"
+                placeholder="電話番号"
                 required
                 className="w-full p-3 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:border-purple-500 transition-colors"
               />
@@ -89,7 +89,7 @@ const Contact = () => {
             <div>
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder="お問い合わせ内容"
                 rows={4}
                 required
                 className="w-full p-3 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:border-purple-500 transition-colors"
@@ -101,7 +101,7 @@ const Contact = () => {
               whileTap={{ scale: 0.95 }}
               className="w-full bg-purple-600 text-white py-3 rounded-full hover:bg-purple-700 transition duration-300 uppercase tracking-wider text-sm"
             >
-              Send Message
+              送信する
             </motion.button>
           </motion.form>
         </div>

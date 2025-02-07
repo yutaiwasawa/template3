@@ -37,17 +37,17 @@ const ServiceModal = ({ isOpen, onClose, title, description, price, features, ic
               <X size={24} />
             </button>
 
-            <div className="text-4xl mb-4">{icon}</div>
+            {/* <div className="text-4xl mb-4">{icon}</div> */}
             <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
             <p className="text-gray-400 mb-6">{description}</p>
             
             <div className="mb-6">
               <span className="text-3xl font-bold text-white">¥{price}</span>
-              <span className="text-gray-400 ml-2">/ month</span>
+              <span className="text-gray-400 ml-2">/ 月</span>
             </div>
 
             <div className="mb-8">
-              <h4 className="font-semibold mb-3 text-white">Included Services:</h4>
+              <h4 className="font-semibold mb-3 text-white">サービス内容:</h4>
               <ul className="space-y-2">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-center text-gray-400">
@@ -67,7 +67,7 @@ const ServiceModal = ({ isOpen, onClose, title, description, price, features, ic
                 onClose();
               }}
             >
-              Get Started
+              申し込む
             </motion.button>
           </motion.div>
         </motion.div>

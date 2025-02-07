@@ -15,10 +15,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { href: '#about', label: 'About' },
-    { href: '#blog', label: 'Insights' },
-    { href: '#services', label: 'Services' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#about', label: '私たち' },
+    { href: '#blog', label: 'ブログ' },
+    { href: '#services', label: 'サービス' },
+    { href: '#contact', label: 'お問い合わせ' },
   ];
 
   return (
@@ -119,7 +119,7 @@ const Header = () => {
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-7xl font-bold text-center mb-6 leading-tight"
         >
-          Transform Your <br />Digital Presence
+          デジタルの力で、<br />ビジネスの未来を創造する
         </motion.h1>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
@@ -127,7 +127,7 @@ const Header = () => {
           transition={{ delay: 0.7 }}
           className="text-xl text-gray-300 mb-8 text-center max-w-2xl"
         >
-          We craft digital experiences that captivate, convert, and drive growth for forward-thinking brands
+          戦略的なデジタルマーケティングで、あなたのビジネスを次のステージへ
         </motion.p>
         <motion.a
           href="#about"
@@ -135,7 +135,7 @@ const Header = () => {
           whileTap={{ scale: 0.95 }}
           className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition duration-300 uppercase tracking-wider text-sm"
         >
-          Discover More
+          私たちについて
         </motion.a>
       </motion.div>
     </header>

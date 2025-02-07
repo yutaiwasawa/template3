@@ -46,24 +46,24 @@ const Blog = () => {
   const posts: BlogPost[] = [
     {
       date: "Mar 15, 2024",
-      title: "The Future of Digital Marketing",
-      excerpt: "Explore emerging trends and technologies shaping the future of digital marketing in 2024 and beyond...",
+      title: "2025年に効果的なSEO戦略とは？最新アルゴリズム対応のポイント",
+      excerpt: "検索エンジンの最新アップデートに対応したSEO施策について解説。コアWebバイタルの重要性と対策方法をご紹介します。...",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Trends"
+      category: "SEO対策"
     },
     {
       date: "Mar 10, 2024",
-      title: "Mastering Social Media Strategy",
-      excerpt: "Learn how to create an effective social media strategy that drives engagement and converts followers...",
+      title: "Instagram活用で売上150%増！事例から学ぶ成功のポイント",
+      excerpt: "実際の成功事例をもとに、効果的なInstagramマーケティングの具体的な手法を紹介します。...",
       image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Social Media"
+      category: "SNSマーケティング"
     },
     {
       date: "Mar 5, 2024",
-      title: "SEO Best Practices for 2024",
-      excerpt: "Stay ahead of the competition with these proven SEO strategies and techniques for better rankings...",
+      title: "データドリブンマーケティングの始め方",
+      excerpt: "Googleアナリティクスを活用した効果的なデータ分析と、施策への活かし方について解説します。...",
       image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "SEO"
+      category: "Web解析"
     }
   ];
 
@@ -76,9 +76,9 @@ const Blog = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Latest Insights</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">ブログ</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Stay updated with the latest trends, strategies, and insights in digital marketing
+            デジタルマーケティングの最新情報をお届けします
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -95,7 +95,7 @@ const Blog = () => {
             href="/blog"
             className="inline-block bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition duration-300 uppercase tracking-wider text-sm"
           >
-            View All Posts
+            ブログ一覧へ
           </a>
         </motion.div>
       </div>

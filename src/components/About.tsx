@@ -11,19 +11,19 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-bold mb-6 text-white">Innovate. Create. <span className="text-purple-400">Elevate.</span></h2>
+          <h2 className="text-4xl font-bold mb-6 text-white">デジタルの力で、<br /><span className="text-purple-400">ビジネスの成長を加速する</span></h2>
           <p className="text-gray-400 mb-6">
-            PIXEL/FLOW is a cutting-edge digital marketing agency that combines creativity with data-driven strategies to deliver exceptional results. We specialize in transforming brands into digital powerhouses.
+            私たちは2015年の創業以来、600社以上のデジタルマーケティング支援を行ってきました。時代とともに変化するデジタル環境において、最新のテクノロジーと確かな戦略で、クライアント企業の成長をサポートしています。
           </p>
           <p className="text-gray-400 mb-8">
-            Our team of experts brings together years of experience in digital marketing, design, and technology to create campaigns that not only look stunning but also drive real business growth.
+            業界や規模を問わず、お客様一社一社に最適なデジタルマーケティング戦略を提案し、継続的な成果創出を実現してきました。私たちの強みは、データ分析に基づく戦略立案と、それを実行に移す実践力にあります。
           </p>
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition duration-300 uppercase tracking-wider text-sm"
           >
-            Learn More
+            私たちのアプローチについて
           </motion.button>
         </motion.div>
         <motion.div
