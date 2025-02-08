@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SiteConfig } from '../lib/notion';
 
-const Header = () => {
+interface HeaderProps {
+  siteConfig: SiteConfig;
+}
+
+const Header = ({ siteConfig }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -14,12 +19,31 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { href: '#about', label: '私たち' },
-    { href: '#blog', label: 'ブログ' },
-    { href: '#services', label: 'サービス' },
-    { href: '#contact', label: 'お問い合わせ' },
-  ];
+  const renderLogo = () => {
+    if (siteConfig.logo.type === 'image') {
+      return (
+        <img 
+          src={siteConfig.logo.content} 
+          alt="Logo" 
+          className="h-8 w-auto"
+        />
+      );
+    }
+    return (
+      <span className="text-white text-2xl font-bold">
+        {siteConfig.logo.content}
+      </span>
+    );
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, url: string) => {
+    e.preventDefault();
+    const element = document.querySelector(url);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
 
   return (
     <header className="relative h-screen">
@@ -43,17 +67,17 @@ const Header = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-white text-2xl font-bold"
           >
-            PIXEL/FLOW
+            {renderLogo()}
           </motion.div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-white">
-            {navItems.map((item) => (
+            {siteConfig.navigation.map((item, index) => (
               <motion.a
-                key={item.href}
-                href={item.href}
+                key={`desktop-nav-${index}`}
+                href={item.url}
+                onClick={(e) => handleNavClick(e, item.url)}
                 className="hover:text-purple-400 transition-colors text-sm uppercase tracking-wider"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -82,13 +106,13 @@ const Header = () => {
               className="md:hidden bg-black/95 backdrop-blur-sm"
             >
               <div className="px-6 py-4 space-y-4">
-                {navItems.map((item) => (
+                {siteConfig.navigation.map((item, index) => (
                   <motion.a
-                    key={item.href}
-                    href={item.href}
+                    key={`mobile-nav-${index}`}
+                    href={item.url}
+                    onClick={(e) => handleNavClick(e, item.url)}
                     className="block text-white hover:text-purple-400 text-sm uppercase tracking-wider"
                     whileHover={{ x: 10 }}
-                    onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                   </motion.a>
@@ -131,6 +155,7 @@ const Header = () => {
         </motion.p>
         <motion.a
           href="#about"
+          onClick={(e) => handleNavClick(e, '#about')}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition duration-300 uppercase tracking-wider text-sm"
